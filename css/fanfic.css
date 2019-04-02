@@ -1,0 +1,104 @@
+
+								/*header*/
+header>div{
+
+	transition: 1s;
+	display: inline-block;
+	cursor: pointer;
+}
+
+header>div:hover{
+
+	transform: scale(1.1);
+}
+
+header>div>figure:first-of-type, header>div>figure:nth-of-type(2){
+	
+	width: 50%;
+	margin: auto;
+
+}
+
+header>div>figure:first-of-type>img, header>div>figure:nth-of-type(2)>img{
+
+	width: 100%;
+
+}
+
+main{
+
+	width: 90%;
+	padding-top: 5%;
+	margin: auto;
+}
+
+							/*artículos*/
+
+article{
+	
+	display: grid;
+	grid-template-rows: 1fr auto auto;
+	grid-gap: 3%;
+	grid-template-areas:
+
+		'fi ti ti'
+		'fi co co'
+		'fi co co'; 
+
+	font-size: calc(12px + 1vw);
+	text-align: justify;
+	margin-bottom: 5%;
+	
+
+}
+article>h4{
+
+	grid-area: ti;
+	font-size: calc(12px + 1.5vw);
+	align-self: center;
+}
+article>figure{
+
+	grid-area: fi;
+	align-self: center;
+}
+
+article>div{
+
+	grid-area: co;
+}
+
+article>figure>a>img{
+
+	filter: grayscale(100%) blur(2px);
+	transition: 2s;
+}
+
+article:hover>figure>a>img{
+
+	filter: grayscale(0%) blur(0px) saturate(150%);
+	transition: 1s;
+}
+
+article>figure>a>img:hover{
+	
+	transform: scale(1.1);
+}
+
+article a{
+
+	color: #B40000;
+	text-decoration: none;
+	background: linear-gradient(to left, #B40000, #F9A347, #B40000);
+  	background-size: 200% 200%;
+  	animation: degradado 1s ease-in-out infinite;
+  	-webkit-background-clip: text;
+	transition: color .2s ease-in-out;
+	animation-direction: alternate-reverse;
+}
+
+article a:hover{
+
+	color:rgba(0,0,0,0);
+  	
+}

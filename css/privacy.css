@@ -1,0 +1,15 @@
+main{
+
+	width: 90%; margin: auto;
+	padding: 3.5%;
+}
+main>section{
+
+	text-align: justify;
+}
+
+main>section>p{
+
+	margin: 5% auto;
+	 
+}

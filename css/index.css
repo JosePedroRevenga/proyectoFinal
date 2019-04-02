@@ -1,0 +1,124 @@
+										/*Header*/
+header figure:nth-of-type(1){
+
+	width: 20%;
+	position: absolute;
+	left: 1%; top: 1%;
+	animation: goku 3.5s;
+	filter: opacity(0);
+}
+
+										/*Título*/
+
+header>figure:nth-of-type(2), header>figure:nth-of-type(3){
+	
+	width: 15%;
+	margin: auto;
+	animation: titulo 3s 5.9s;
+	filter: opacity(0);
+	animation-fill-mode: forwards;
+	
+}
+
+header>figure:nth-of-type(2)>img, header>figure:nth-of-type(3)>img{
+
+	width: 100%;
+
+}
+										/*Kamehameha*/
+header figure:nth-of-type(4) img{
+
+	width: 10%;
+	position: absolute;
+	left: 5%; top: 30%;
+	animation: kame 1.5s 3.5s;
+	filter: opacity(0);
+}
+
+										/*Explosión*/
+header figure:nth-of-type(5) img{
+
+	width: 2%;
+	position: absolute;
+	left: 40%; top: -10%;
+	box-shadow: inset 0px 0px 500px 10px #00CCFF;
+	border-radius: 1000px;
+	animation: explosion 2s 4s;
+	filter: opacity(0);
+}
+
+							/*Animación header*/
+
+
+@keyframes goku{
+
+	0%{filter: opacity(1);}
+	90%{filter: opacity(1);}
+	95%{filter: opacity(0.75);}
+	100%{filter: opacity(0.55);}
+}
+
+@keyframes kame{
+
+	0%{filter: opacity(0.25);}
+	1%{left: 5%;filter: opacity(0.55)}
+	35%{filter: opacity(0.75);left: 40%;}
+	90%{filter: brightness(300%);left: 40%;;}
+	100%{filter: opacity(0);left: 40%;}
+}
+
+@keyframes explosion{
+	
+	0%{width: 2%;left: 46%; top: 45%;}
+	1%{filter: opacity(1);left: 46%; top: 45%;  box-shadow: inset 0px 0px 100px 10px #FFF;}
+	25%{width: 8%;filter: opacity(1);}
+	75%{filter: opacity(0.75);}
+	85%{filter: opacity(0.55);}
+	95%{filter: opacity(0.25);}
+	100%{width: 25%; left: 35%; top: -25%;box-shadow: inset 0px 0px 100px 100px #FFA800, 0px 0px 100px 100px #00CCFF; border-radius: 1200px; filter: opacity(0);}
+
+}
+
+@keyframes titulo{
+
+	0%{filter: opacity(0.25);transform: scale(2);}
+	100%{filter: opacity(1);transform: scale(1);}
+}
+
+
+													/*Main*/
+
+main{
+	
+	width: 95%;
+	margin: auto;
+	display: grid;
+	padding-top: 3%;
+	grid-template-columns: auto auto 10vw;
+	grid-column-gap: 5%;
+	font-size: calc(8px + 1vw);
+	
+}
+
+main>section{
+	
+	padding: 2.5%;
+	text-align: justify;	
+}
+main>section>figure{
+
+	width: 55%;
+	margin: 2% auto;
+
+}
+
+main>section>figure>img{
+
+	width: 100%;
+}
+
+main>aside{
+	
+	padding: 5%;
+	grid-column: 2/4;
+}
